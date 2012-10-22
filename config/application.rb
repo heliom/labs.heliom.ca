@@ -14,7 +14,8 @@ module Heliom::Labs
     end
 
     $labs = [
-      { :title => 'iOS folders', :view => 'ios_folders', :tags => %w(css no-js) }
+      { :title => 'iOS folders', :view => 'ios_folders', :tags => %w(css no-js) },
+      { :title => 'Skeleton', :view => 'skeleton', :tags => %w(css) },
     ]
 
     # Routes

@@ -1,0 +1,147 @@
+.skeleton
+  .content-box
+    position: absolute
+    top: 50%; left: 50%
+    size: 200px
+    margin: -100px 0 0 -100px
+    background-color: #f4f4f4
+    border: 3px solid $heliomColor
+
+    .chrome &:after
+      position: absolute
+      font-size: 12
+      top: 105%
+      content: 'Note: Chrome does not support overflow hidden with border-radius. See on Safari or Firefox.'
+
+  #skeleton
+    position: absolute
+    size: 120px 105px
+    top: 50%; left: 50%
+    margin: -60px 0 0 -60px
+
+  // Head ----------------------------------------------------------------------
+  .head
+    position: relative
+    size: 100%
+    background-color: #9c9bae
+    border-radius: 100%
+    border: 3px solid #000
+    border-bottom-width: 2px
+    overflow: hidden
+
+  .head:before
+    z-index: 1
+    content: ''
+    position: absolute
+    top: -10%; left: 15%
+    size: 100% 120%
+    background-color: #b9b8cf
+    border-radius: 100%
+
+  // Eyes ----------------------------------------------------------------------
+  .eye,
+  .eye:after
+    z-index: 2
+    position: absolute
+    display: block
+    size: 42px 50px
+    top: 35px
+    background-color: #63627b
+    border-radius: 100%
+    border: 2px solid #000
+
+  .eye:after
+    content: ''
+    display: block
+    top: 1px
+    width: 90%
+    border: 0
+    background-color: #000
+
+  .eye.left
+   left: 10px
+   transform: rotate(-25deg)
+
+  .eye.left:after { right: 0 }
+  .eye.right
+    right: 10px
+    transform: rotate(25deg)
+
+  .eye.right:after { left: 0 }
+
+  // Nose ----------------------------------------------------------------------
+  .nose
+    z-index: 1
+    display: block
+    position: absolute
+    top: 85px; left: 50%
+
+  .nostril, .nostril:after
+    display: block
+    position: absolute
+    top: 0
+    size: 10px 16px
+    background-color: #63627b
+    border-radius: 100%
+    overflow: hidden
+
+  .nostril:after
+    content: ''
+    top: -1px
+    size: 100% 90%
+    border: 0
+    border-radius: 0 0 100% 100%
+    background-color: #000
+
+  .nostril.left
+    right: -3px
+    transform: rotate(25deg)
+
+  .nostril.left:after { right: -1px }
+  .nostril.right
+    left: -3px
+    transform: rotate(-25deg)
+
+  .nostril.right:after { left: -1px }
+
+  // Mouth ---------------------------------------------------------------------
+  .mouth
+    display: block
+    position: absolute
+    left: 50%; bottom: -17px
+    margin-left: -30px
+    size: 60px 25px
+    background-color: #9c9bae
+    border: 3px solid #000
+    border-left-width: 2px
+    border-right-width: 2px
+    border-top: 0
+    border-radius: 0 0 100% 100%
+    overflow: hidden
+
+  .mouth:before
+    z-index: 0
+    content: ''
+    position: absolute
+    top: 2px; left: 15%
+    size: 100%
+    background-color: #b9b8cf
+
+  .teeth,
+  .teeth:before,
+  .teeth:after
+    position: absolute
+    bottom: -2px; left: 50%
+    margin-left: -1px
+    display: block
+    size: 2px 15px
+    background-color: #000
+    border-radius: 100%
+
+  .teeth:before,
+  .teeth:after
+    content: ''
+    bottom: 2px
+
+  .teeth:before { left: -17px }
+  .teeth:after { left: 17px }
