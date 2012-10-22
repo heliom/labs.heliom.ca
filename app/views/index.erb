@@ -2,7 +2,7 @@
   <ul>
     <% $labs.each do |lab| %>
       <li>
-        <a href="/<%= url_for_view(lab[:view]) %>">
+        <a href="/<%= url_for_view(lab[:view]) %>" data-velcro-push="#content">
           <span class="label"><%= lab[:title] %></span>
           <span class="tags"><%= lab[:tags].join(', ') %></span>
         </a>
