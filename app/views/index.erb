@@ -1,0 +1,12 @@
+<nav>
+  <ul>
+    <% $labs.each do |lab| %>
+      <li>
+        <a href="/<%= url_for_view(lab[:view]) %>">
+          <span class="label"><%= lab[:title] %></span>
+          <span class="tags"><%= lab[:tags].join(', ') %></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</nav>

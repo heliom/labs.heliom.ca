@@ -1,0 +1,111 @@
+@import "nib"
+@import "utils/reset"
+@import "utils/functions"
+@import "utils/mixins"
+
+// Variables -----------------------------------------------------------------
+$bgColor = #1c1c1c
+$heliomColor = #5d53fc
+
+// Base ----------------------------------------------------------------------
+* { box-sizing: border-box }
+
+html
+  font-size: 62.5%
+  height: 100%
+
+body
+  position: relative
+  height: 100%
+  font-size: 18
+  background-color: $bgColor
+
+body, legend, input, textarea, button
+  font-family: Helvetica, Arial, sans-serif
+  line-height: 1.4
+  color: #fff
+
+a { color: #fff }
+a:focus, a:hover { color: #fff }
+
+h1 { margin: 0 }
+
+// Header --------------------------------------------------------------------
+header
+  position: absolute
+  top: 0; left: 0
+  display: inline-block
+  width: 100px
+  margin: 0 4%
+  padding: 2% 0
+  transition: width .4s
+
+  a, img { display: block }
+  img { width: 100% }
+
+// Layout --------------------------------------------------------------------
+#content
+  padding: 0 0 0 100px
+  margin: 0 0 0 8%
+  transition: padding .4s
+
+// Nav -----------------------------------------------------------------------
+nav
+  box-shadow: -2px 0 5px rgba(#000, .4)
+  background-color: darken($bgColor, 2%)
+
+  ul
+    margin: 0
+    list-style-type: none
+
+  li
+    display: block
+    border-bottom: 1px solid rgba(#000, .2)
+
+  a
+    display: block
+    padding: .8em 1em
+    border-top: 1px solid rgba(#fff, .03)
+    border-left: 2px solid transparent
+    background-color: rgba(#fff, .02)
+    transition-property: background-color, border
+    transition-duration: .15s
+    transition-timing-function: ease-out
+
+    &:hover
+      border-left-color: $heliomColor !important
+      background-color: rgba(#fff, .05)
+
+  li:nth-child(1) a { border-left-color: lime }
+  li:nth-child(2) a { border-left-color: yellow }
+
+  span
+    display: inline-block
+    vertical-align: middle
+
+  span.label
+    margin: 0 .1em 0 0
+    &:after { content: ' —'; color: darken(#fff, 70%) }
+
+  span.tags
+    position: relative
+    top: 1px
+    font-size: 14
+    color: darken(#fff, 70%)
+    font-weight: 300
+
+// Views ---------------------------------------------------------------------
+@import "views/index"
+
+// Media queries -------------------------------------------------------------
+@media (max-width: 680px)
+  header, .index header
+    display: block
+    position: relative
+    width: 200px
+    margin: 0 auto
+    padding: 6% 0
+
+  #content, .index #content
+    margin: 0
+    padding: 0

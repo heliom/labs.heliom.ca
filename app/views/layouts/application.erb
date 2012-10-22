@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title><%= "#{@title} | " if @title %>Heliom Labs</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <%= stylesheet_include_tag 'styles' %>
+    <%= javascript_include_tag 'heliom' %>
+  </head>
+  <body class="<%= @view_class %>">
+    <meta name="velcro:bodyClass" content="<%= @view_class %>">
+
+    <header>
+      <a href="/">
+        <img src="/images/heliom-logo.svg" alt="Heliom">
+      </a>
+    </header>
+
+    <div id="content">
+      <%= yield %>
+    </div>
+
+    <script>document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/' +
+      ('__proto__' in {} && !/firefox\/3/i.test(navigator.userAgent) ?
+      'zepto/1.0rc1/zepto.min.js' : 'jquery/1.8.2/jquery.min.js') + '"><\/script>')</script>
+    <%= javascript_include_tag 'scripts' %>
+  </body>
+</html>
