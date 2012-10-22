@@ -33,6 +33,7 @@ if /safari/i.test navigator.userAgent
   html.className += ' safari-4' if /version\/4/i.test navigator.userAgent
   html.className += ' safari-5' if /version\/5/i.test navigator.userAgent
 html.className += ' firefox-3' if /firefox\/3/i.test navigator.userAgent
+html.className += ' chrome' if /Chrome/.test navigator.userAgent
 
 # HTML5 Shiv
 for elem in ['article', 'aside', 'canvas', 'details', 'figcaption', 'figure', 'footer', 'header', 'hgroup', 'mark', 'menu', 'nav', 'section', 'summary', 'time']
