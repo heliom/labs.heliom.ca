@@ -1,6 +1,6 @@
 <% time = Time.new %>
 
-<div id="iphone">
+<div id="iphone" class="content-box">
   <div class="status"><%= "#{time.hour}:#{'0' if time.min < 10}#{time.min}" %></div>
   <a id="row1-1" href="#row1-1" class="first open">
     <span class="label">Utilities</span>
@@ -100,5 +100,6 @@
 
 <div id="meta">
   By: <a href="https://twitter.com/EtienneLem">@EtienneLem</a><br>
-  Icons: <a href="https://twitter.com/mantia">@mantia</a> - <a href="http://mantia.me/icons/iphone-icon-archive">http://mantia.me/icons/iphone-icon-archive</a>
+  Icons: <a href="https://twitter.com/mantia">@mantia</a> (<a href="http://mantia.me/icons/iphone-icon-archive">src</a>)<br>
+  <%= asset_links('ios_folders') %>
 </div>
