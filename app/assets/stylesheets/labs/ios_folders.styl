@@ -1,0 +1,226 @@
+.ios-folders #iphone
+  position: absolute
+  top: 50%; left: 50%
+  margin: -240px 0 0 -160px
+  display: block
+  size: 320px 480px
+  padding: 33px 0 0 0
+  overflow: hidden
+  border-radius: 9px
+  font-size: 0
+  box-shadow: 0 0 5px rgba(#000, .5)
+
+  .status
+    position: absolute
+    z-index: 1
+    top: 0; left: 0
+    width: 100%; height: 20px
+    line-height: 21px
+    color: #fff
+    font-size: 12
+    text-align: center
+    background-color: rgba(#000, .6)
+
+  a
+    position: relative
+    z-index: 1
+    display: inline-block
+    width: 57px; height: 57px
+    margin: 0 0 0 19px
+
+    & > .label
+      display: block
+      width: 100%
+      position: absolute
+      bottom: -1.45em; left: 0
+      font-size: 11
+      text-align: center
+
+    & > .app
+      display: block
+      float: left
+      size: 13px
+      margin: 4px 0 0 3px
+      &.first { margin-left: 4px }
+
+  a.close
+    span { display: block }
+
+    & > .arrow
+      z-index: 2
+      position: absolute
+      bottom: -19px; left: 50%
+      width: 24px; height: 14px
+      margin: 0 0 0 -12px
+      overflow: hidden
+
+    & > span > span
+      position: relative
+      size: 18px
+      top: 4px; left: 50%
+      margin: 0 0 0 -9px
+      transform: rotate(45deg)
+      overflow: hidden
+      border: 1px solid rgba(#fff, .3)
+
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        top: 50%; left: 50%
+        margin: -18px 0 0 -18px
+        size: 36px
+        transform: rotate(-45deg)
+        box-shadow: inset 0 0 33px rgba(#000, .75)
+        background: #3c3f48 url(/images/labs/ios_folders/linen.jpg) top left no-repeat
+
+  a[href]
+    color: #fff
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.3)
+    background: #3c3f48 url(/images/labs/ios_folders/linen.jpg) center center no-repeat
+    border-radius: 9px
+    border: 2px solid #fff
+    border-left-color: darken(#fff, 30%)
+    border-right-color: darken(#fff, 30%)
+
+    & > .label { bottom: -1.6em }
+
+  a img
+    display: block
+
+  a.close { display: none }
+  a.first { margin: 0 0 0 17px }
+
+  a > .label, .folder > .label
+    text-shadow: 0 1px 0 #000, 0 2px 2px #000
+
+  .background
+    z-index: 0
+    position: absolute
+    top: 0; left: 0
+    width: 100%
+    display: block
+    background: url(/images/labs/ios_folders/bg.png) top left no-repeat
+    background-size: 100%
+    transition-property: top, height
+    transition-duration: .2s
+    transition-timing-function: ease-out
+
+  $bgHeight1 = 106
+  $bgHeight = 89
+  $bgTop2 = $bgHeight1
+  $bgTop3 = $bgTop2 + $bgHeight
+  $bgTop4 = $bgTop3 + $bgHeight
+  .background.part1 { height: ($bgHeight1)px; border-radius: 8px 8px 0 0 }
+  .background.part2 { top: ($bgTop2)px; height: ($bgHeight)px; background-position: center (- $bgTop2 px); }
+  .background.part3 { top: ($bgTop3)px; height: ($bgHeight)px; background-position: center (- $bgTop3 px); }
+  .background.part4 { top: ($bgTop4)px; height: (480 - $bgTop4)px; background-position: center (- $bgTop4 px); border-radius: 0 0 8px 8px }
+
+  .folders
+    margin: 16px 0
+
+  .folder
+    position: relative
+    z-index: 1
+    height: 0px
+    overflow: hidden
+    box-shadow: inset 0 0 15px rgba(#000, .75)
+    background: #3c3f48 url(/images/labs/ios_folders/linen.jpg) top left repeat
+    transition-property: margin, height
+    transition-duration: .2s
+    transition-timing-function: ease-out
+
+    & > .label
+      position: absolute
+      top: 6px; left: 18px
+      font-size: 18
+
+  .folder a
+    border: 0
+    margin-top: 36px
+    margin-bottom: 0
+    background: none
+    box-shadow: none
+
+  .dock
+    position: absolute
+    z-index: 1
+    bottom: 0; left: 0
+    width: 100%
+    background: url(/images/labs/ios_folders/dock.png) left bottom no-repeat
+    transition: bottom .2s ease-out
+
+    a { bottom: 22px }
+
+    a:before
+      z-index: -1
+      position: absolute
+      bottom: -51px; left: 0
+      content: ''
+      display: block
+      size: 57px
+      background-size: 100%
+      transform: scaleY(-1)
+      opacity: .3
+
+    a:nth-child(1):before { background: url(/images/labs/ios_folders/icons/phone.png) top left no-repeat }
+    a:nth-child(2):before { background: url(/images/labs/ios_folders/icons/text.png) top left no-repeat }
+    a:nth-child(3):before { background: url(/images/labs/ios_folders/icons/safari.png) top left no-repeat }
+    a:nth-child(4):before { background: url(/images/labs/ios_folders/icons/mail.png) top left no-repeat }
+
+  :target { display: none }
+  :target + a.close
+    position: relative
+    z-index: 101
+    display: inline-block
+
+    & > span > span
+      animation: slide-in .2s ease-out
+
+  $folderHeight = 120
+  #row1-1:target ~ .folders > .folder1-1,
+  #row1-2:target ~ .folders > .folder1-2,
+  #row2-1:target ~ .folders > .folder2-1,
+  #row3-1:target ~ .folders > .folder3-1
+    z-index: 100
+    height: ($folderHeight)px
+    border: 1px solid rgba(#fff, .03)
+    border-left: 0
+    border-right: 0
+    outline: 480px solid rgba(#000, .65);
+
+  $folderHeight1 = 214
+  #row1-1:target ~ .folders > .folder1-1 { height: ($folderHeight1)px }
+  #row1-1:target ~ .background.part2 { top: ($bgTop2 + $folderHeight1)px }
+  #row1-1:target ~ .background.part3 { top: ($bgTop3 + $folderHeight1)px }
+  #row1-1:target ~ .background.part4 { top: ($bgTop4 + $folderHeight1)px }
+  #row1-1:target ~ .dock { bottom: (- $folderHeight1 px) }
+
+  #row1-2:target ~ .background.part2 { top: ($bgTop2 + $folderHeight)px }
+
+  #row1-2:target ~ .background.part3,
+  #row2-1:target ~ .background.part3 { top: ($bgTop3 + $folderHeight)px }
+
+  #row1-2:target ~ .background.part4,
+  #row2-1:target ~ .background.part4,
+  #row3-1:target ~ .background.part4 { top: ($bgTop4 + $folderHeight)px }
+
+  #row1-2:target ~ .dock,
+  #row2-1:target ~ .dock,
+  #row3-1:target ~ .dock { bottom: (- $folderHeight px) }
+
+// --------------------------------------------------------------------
+@keyframes slide-in
+  from { top: 18px }
+  to { top: 4px }
+
+// --------------------------------------------------------------------
+@media (max-width: 680px)
+  .ios-folders #iphone
+    position: relative
+    top: 0; left: 0
+    margin: 0 auto
+
+  #meta
+    position: relative
+    padding: 4% 2%

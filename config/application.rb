@@ -14,6 +14,7 @@ module Heliom::Labs
     end
 
     $labs = [
+      { :title => 'iOS folders', :view => 'ios_folders', :tags => %w(css no-js) }
     ]
 
     # Routes
@@ -26,6 +27,7 @@ module Heliom::Labs
       url = url_for_view(lab[:view])
 
       get "/#{url}" do
+        @title = lab[:title]
         @view_class = url
         erb "labs/#{lab[:view]}".to_sym
       end
