@@ -16,7 +16,7 @@ require './lib/heliom/labs/version'
 desc 'deploy app to heroku'
 task :deploy => [:bump, :'assets:compile', :'assets:commit', :tag] do
   puts "Pushing to heroku"
-  `git push -f heroku master`
+  `git push -f production master`
   puts "=> Successfully pushed to heroku"
 end
 
@@ -78,13 +78,13 @@ namespace :assets do
     Stylus.compress = true
     Stylus.use :nib
 
-    asset = sprockets['styles.styl']
+    asset   = sprockets['styles.styl']
     outpath = File.join('public', 'css')
     outfile = Pathname.new(outpath).join("styles-#{version}.min.css")
 
-    FileUtils.mkdir_p outfile.dirname
-
+    FileUtils.mkdir_p(outfile.dirname)
     asset.write_to(outfile)
+
     puts "=> Successfully compiled css assets"
   end
 
@@ -100,13 +100,22 @@ namespace :assets do
     sprockets.js_compressor = YUI::JavaScriptCompressor.new :munge => true, :optimize => true
     sprockets.append_path 'app/assets/javascripts'
 
-    asset     = sprockets['scripts.coffee']
-    outpath   = File.join('public', 'js')
-    outfile   = Pathname.new(outpath).join("scripts-#{version}.min.js")
+    # General Scripts
+    general_asset   = sprockets['scripts.coffee']
+    general_outpath = File.join('public', 'js')
+    general_outfile = Pathname.new(general_outpath).join("scripts-#{version}.min.js")
 
-    FileUtils.mkdir_p outfile.dirname
+    FileUtils.mkdir_p(general_outfile.dirname)
+    general_asset.write_to(general_outfile)
 
-    asset.write_to(outfile)
+    # Header Scripts
+    header_asset   = sprockets['heliom.js.coffee']
+    header_outpath = File.join('public', 'js')
+    header_outfile = Pathname.new(header_outpath).join("heliom-#{version}.min.js")
+
+    FileUtils.mkdir_p(header_outfile.dirname)
+    header_asset.write_to(header_outfile)
+
     puts "=> Successfully compiled js assets"
   end
 
@@ -122,7 +131,7 @@ namespace :assets do
 
     puts "Commiting compiled assets"
     `git add public/css public/js`
-    `git commit -m "Update compiled assets"`
+    `git commit -m "Compile assets"`
     puts "=> Successfully commited static assets"
   end
 end
