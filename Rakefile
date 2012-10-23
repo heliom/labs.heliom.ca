@@ -8,13 +8,19 @@ end
 # App version
 require './lib/heliom/labs/version'
 
-# `bundle exec rake deploy`
+# `bundle exec rake release`
 # * Compile and commit assets
 # * Bump version
 # * Create a new tag and push it
 # * Push to Heroku
 desc 'deploy app to heroku'
-task :deploy => [:bump, :'assets:compile', :'assets:commit', :tag] do
+task :release => [:bump, :'assets:compile', :'assets:commit', :tag, :deploy] do
+end
+
+# `bundle exec rake deploy`
+# * Push to Heroku
+desc 'deploy app to heroku'
+task :deploy do
   puts "Pushing to heroku"
   `git push -f production master`
   puts "=> Successfully pushed to heroku"
