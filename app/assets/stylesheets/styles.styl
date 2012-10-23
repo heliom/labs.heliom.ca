@@ -96,7 +96,23 @@ nav
 
 // Views ---------------------------------------------------------------------
 @import "views/index"
-@import "labs/labs"
+
+// Labs ----------------------------------------------------------------------
+#meta
+  position: absolute
+  bottom: 0; left: 0
+  font-size: 11
+  color: #888
+  padding: 1% 2%
+
+  a:hover { color: $heliomColor }
+
+.content-box
+  border-radius: 9px
+  box-shadow: 0 0 5px rgba(#000, .5)
+
+@import "labs/ios_folders"
+@import "labs/skeleton"
 
 // Media queries -------------------------------------------------------------
 @media (max-width: 680px)
