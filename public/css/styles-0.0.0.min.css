@@ -1,0 +1,130 @@
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}
+fieldset,input,select,button,textarea,figure{margin:0;font-size:100%;max-width:100%}
+fieldset,legend,a img{padding:0;border:0}
+time{display:inline}
+body{margin:0}
+a{text-decoration:none}
+[tabindex]:not(a){outline:0}
+ul,ol{padding:0}
+h1,h2,h3,h4{text-rendering:optimizeLegibility}
+sub,sup{font-size:70%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+address{font-style:normal}
+img{max-width:100%}
+[hidden]{display:none}
+.clear{*zoom:1;}
+.clear:before,.clear:after{content:'';display:table;clear:both}
+.newline:after{content:'\A';white-space:pre}
+.image-replacement{font:0/0 a;color:transparent}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{font-size:62.5% ;height:100%}
+body{position:relative;height:100%;font-size:18px ;font-size:1.8rem ;background-color:#1c1c1c}
+body,legend,input,textarea,button{font-family:Helvetica,Arial,sans-serif;line-height:1.4;color:#fff}
+a{color:#fff}
+a:focus,a:hover{color:#fff}
+h1{margin:0}
+header{position:absolute;top:0;left:0;display:inline-block ;*display:inline ;*zoom:1 ;width:100px;margin:0 4%;padding:2% 0;-webkit-transition:width .4s;-moz-transition:width .4s;-o-transition:width .4s;-ms-transition:width .4s;transition:width .4s;}
+header a,header img{display:block }
+header img{width:100%}
+#content{padding:0 0 0 100px;margin:0 0 0 8%;-webkit-transition:padding .4s;-moz-transition:padding .4s;-o-transition:padding .4s;-ms-transition:padding .4s;transition:padding .4s}
+nav{-webkit-box-shadow:-2px 0 5px rgba(0,0,0,0.40);box-shadow:-2px 0 5px rgba(0,0,0,0.40);background-color:#1b1b1b;}
+nav ul{margin:0;list-style-type:none}
+nav li{display:block ;border-bottom:1px solid rgba(0,0,0,0.20)}
+nav a{display:block ;padding:.8em 1em;border-top:1px solid rgba(255,255,255,0.03);border-left:2px solid transparent;background-color:rgba(255,255,255,0.02);-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;-o-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.15s;-moz-transition-duration:.15s;-o-transition-duration:.15s;-ms-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+nav a:hover{border-left-color:#5d53fc !important;background-color:rgba(255,255,255,0.05)}
+nav li:nth-child(1) a{border-left-color:#0f0}
+nav li:nth-child(2) a{border-left-color:#ff0}
+nav span{display:inline-block ;*display:inline ;*zoom:1 ;vertical-align:middle}
+nav span.label{margin:0 .1em 0 0;}
+nav span.label:after{content:' —';color:#4d4d4d}
+nav span.tags{position:relative;top:1px;font-size:14px ;font-size:1.4rem ;color:#4d4d4d;font-weight:300}
+.index header{width:300px}
+.index #content{padding:0 0 0 300px}
+#meta{position:absolute;bottom:0;left:0;font-size:11px ;font-size:1.1rem ;color:#888;padding:1% 2%;}
+#meta a:hover{color:#5d53fc}
+.content-box{-webkit-border-radius:9px;border-radius:9px;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.50);box-shadow:0 0 5px rgba(0,0,0,0.50)}
+.ios-folders #iphone{position:absolute;top:50%;left:50%;margin:-240px 0 0 -160px;display:block ;width:320px ;height:480px ;padding:33px 0 0 0;overflow:hidden ;font-size:0 ;}
+.ios-folders #iphone .status{position:absolute;z-index:1;top:0;left:0;width:100%;height:20px;line-height:21px;color:#fff;font-size:12px ;font-size:1.2rem ;text-align:center;background-color:rgba(0,0,0,0.60)}
+.ios-folders #iphone a{position:relative;z-index:1;display:inline-block ;*display:inline ;*zoom:1 ;width:57px;height:57px;margin:0 0 0 19px;}
+.ios-folders #iphone a > .label{display:block ;width:100%;position:absolute;bottom:-1.45em;left:0;font-size:11px ;font-size:1.1rem ;text-align:center}
+.ios-folders #iphone a > .app{display:block ;float:left;width:13px ;height:13px ;margin:4px 0 0 3px;}
+.ios-folders #iphone a > .app.first{margin-left:4px}
+.ios-folders #iphone a.close span{display:block }
+.ios-folders #iphone a.close > .arrow{z-index:2;position:absolute;bottom:-19px;left:50%;width:24px;height:14px;margin:0 0 0 -12px;overflow:hidden }
+.ios-folders #iphone a.close > span > span{position:relative;width:18px ;height:18px ;top:4px;left:50%;margin:0 0 0 -9px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);overflow:hidden ;border:1px solid rgba(255,255,255,0.30);}
+.ios-folders #iphone a.close > span > span:before{content:'';display:block ;position:absolute;top:50%;left:50%;margin:-18px 0 0 -18px;width:36px ;height:36px ;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-box-shadow:inset 0 0 33px rgba(0,0,0,0.75);box-shadow:inset 0 0 33px rgba(0,0,0,0.75);background:#3c3f48 url("/images/labs/ios_folders/linen.jpg") top left no-repeat}
+.ios-folders #iphone a[href]{color:#fff;-webkit-box-shadow:inset 0 2px 5px rgba(0,0,0,0.30);box-shadow:inset 0 2px 5px rgba(0,0,0,0.30);background:#3c3f48 url("/images/labs/ios_folders/linen.jpg") center center no-repeat;-webkit-border-radius:9px;border-radius:9px;border:2px solid #fff;border-left-color:#b3b3b3;border-right-color:#b3b3b3;}
+.ios-folders #iphone a[href] > .label{bottom:-1.6em}
+.ios-folders #iphone a img{display:block }
+.ios-folders #iphone a.close{display:none }
+.ios-folders #iphone a.first{margin:0 0 0 17px}
+.ios-folders #iphone a > .label,.ios-folders #iphone .folder > .label{text-shadow:0 1px 0 #000,0 2px 2px #000}
+.ios-folders #iphone .background{z-index:0;position:absolute;top:0;left:0;width:100%;display:block ;background:url("/images/labs/ios_folders/bg.png") top left no-repeat;-webkit-background-size:100%;background-size:100%;-webkit-transition-property:top,height;-moz-transition-property:top,height;-o-transition-property:top,height;-ms-transition-property:top,height;transition-property:top,height;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;-o-transition-duration:.2s;-ms-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out}
+.ios-folders #iphone .background.part1{height:106px;-webkit-border-radius:8px 8px 0 0;border-radius:8px 8px 0 0}
+.ios-folders #iphone .background.part2{top:106px;height:89px;background-position:center -106px}
+.ios-folders #iphone .background.part3{top:195px;height:89px;background-position:center -195px}
+.ios-folders #iphone .background.part4{top:284px;height:196px;background-position:center -284px;-webkit-border-radius:0 0 8px 8px;border-radius:0 0 8px 8px}
+.ios-folders #iphone .folders{margin:16px 0}
+.ios-folders #iphone .folder{position:relative;z-index:1;height:0;overflow:hidden ;-webkit-box-shadow:inset 0 0 15px rgba(0,0,0,0.75);box-shadow:inset 0 0 15px rgba(0,0,0,0.75);background:#3c3f48 url("/images/labs/ios_folders/linen.jpg") top left repeat;-webkit-transition-property:margin,height;-moz-transition-property:margin,height;-o-transition-property:margin,height;-ms-transition-property:margin,height;transition-property:margin,height;-webkit-transition-duration:.2s;-moz-transition-duration:.2s;-o-transition-duration:.2s;-ms-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+.ios-folders #iphone .folder > .label{position:absolute;top:6px;left:18px;font-size:18px ;font-size:1.8rem }
+.ios-folders #iphone .folder a{border:0;margin-top:36px;margin-bottom:0;background:none;-webkit-box-shadow:none;box-shadow:none}
+.ios-folders #iphone .dock{position:absolute;z-index:1;bottom:0;left:0;width:100%;background:url("/images/labs/ios_folders/dock.png") left bottom no-repeat;-webkit-transition:bottom .2s ease-out;-moz-transition:bottom .2s ease-out;-o-transition:bottom .2s ease-out;-ms-transition:bottom .2s ease-out;transition:bottom .2s ease-out;}
+.ios-folders #iphone .dock a{bottom:22px}
+.ios-folders #iphone .dock a:before{z-index:-1;position:absolute;bottom:-51px;left:0;content:'';display:block ;width:57px ;height:57px ;-webkit-background-size:100%;background-size:100%;-webkit-transform:scaleY(-1);-moz-transform:scaleY(-1);-o-transform:scaleY(-1);-ms-transform:scaleY(-1);transform:scaleY(-1);opacity:.3 ;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30) ;filter:alpha(opacity=30) }
+.ios-folders #iphone .dock a:nth-child(1):before{background:url("/images/labs/ios_folders/icons/phone.png") top left no-repeat}
+.ios-folders #iphone .dock a:nth-child(2):before{background:url("/images/labs/ios_folders/icons/text.png") top left no-repeat}
+.ios-folders #iphone .dock a:nth-child(3):before{background:url("/images/labs/ios_folders/icons/safari.png") top left no-repeat}
+.ios-folders #iphone .dock a:nth-child(4):before{background:url("/images/labs/ios_folders/icons/mail.png") top left no-repeat}
+.ios-folders #iphone :target{display:none }
+.ios-folders #iphone :target + a.close{position:relative;z-index:101;display:inline-block ;*display:inline ;*zoom:1 ;}
+.ios-folders #iphone :target + a.close > span > span{-webkit-animation:slide-in .2s ease-out;-moz-animation:slide-in .2s ease-out;-o-animation:slide-in .2s ease-out;-ms-animation:slide-in .2s ease-out;animation:slide-in .2s ease-out}
+.ios-folders #iphone #row1-1:target ~ .folders > .folder1-1,.ios-folders #iphone #row1-2:target ~ .folders > .folder1-2,.ios-folders #iphone #row2-1:target ~ .folders > .folder2-1,.ios-folders #iphone #row3-1:target ~ .folders > .folder3-1{z-index:100;height:120px;border:1px solid rgba(255,255,255,0.03);border-left:0;border-right:0;outline:480px solid rgba(0,0,0,0.65)}
+.ios-folders #iphone #row1-1:target ~ .folders > .folder1-1{height:214px}
+.ios-folders #iphone #row1-1:target ~ .background.part2{top:320px}
+.ios-folders #iphone #row1-1:target ~ .background.part3{top:409px}
+.ios-folders #iphone #row1-1:target ~ .background.part4{top:498px}
+.ios-folders #iphone #row1-1:target ~ .dock{bottom:-214px}
+.ios-folders #iphone #row1-2:target ~ .background.part2{top:226px}
+.ios-folders #iphone #row1-2:target ~ .background.part3,.ios-folders #iphone #row2-1:target ~ .background.part3{top:315px}
+.ios-folders #iphone #row1-2:target ~ .background.part4,.ios-folders #iphone #row2-1:target ~ .background.part4,.ios-folders #iphone #row3-1:target ~ .background.part4{top:404px}
+.ios-folders #iphone #row1-2:target ~ .dock,.ios-folders #iphone #row2-1:target ~ .dock,.ios-folders #iphone #row3-1:target ~ .dock{bottom:-120px}
+@-moz-keyframes slide-in{0%{top:18px}
+100%{top:4px}
+}@-webkit-keyframes slide-in{0%{top:18px}
+100%{top:4px}
+}@-o-keyframes slide-in{0%{top:18px}
+100%{top:4px}
+}@-ms-keyframes slide-in{0%{top:18px}
+100%{top:4px}
+}@keyframes slide-in{0%{top:18px}
+100%{top:4px}
+}.skeleton .content-box{position:absolute;top:50%;left:50%;width:200px ;height:200px ;margin:-100px 0 0 -100px;background-color:#f4f4f4;border:3px solid #5d53fc;}
+.chrome .skeleton .content-box:after{position:absolute;font-size:12px ;font-size:1.2rem ;top:105%;content:'Note: Chrome does not support overflow hidden with border-radius. See on Safari or Firefox.'}
+.skeleton #skeleton{position:absolute;width:120px ;height:105px ;top:50%;left:50%;margin:-60px 0 0 -60px}
+.skeleton .head{position:relative;width:100% ;height:100% ;background-color:#9c9bae;-webkit-border-radius:100%;border-radius:100%;border:3px solid #000;border-bottom-width:2px;overflow:hidden }
+.skeleton .head:before{z-index:1;content:'';position:absolute;top:-10%;left:15%;width:100% ;height:120% ;background-color:#b9b8cf;-webkit-border-radius:100%;border-radius:100%}
+.skeleton .eye,.skeleton .eye:after{z-index:2;position:absolute;display:block ;width:42px ;height:50px ;top:35px;background-color:#63627b;-webkit-border-radius:100%;border-radius:100%;border:2px solid #000}
+.skeleton .eye:after{content:'';display:block ;top:1px;width:90%;border:0;background-color:#000}
+.skeleton .eye.left{left:10px;-webkit-transform:rotate(-25deg);-moz-transform:rotate(-25deg);-o-transform:rotate(-25deg);-ms-transform:rotate(-25deg);transform:rotate(-25deg)}
+.skeleton .eye.left:after{right:0}
+.skeleton .eye.right{right:10px;-webkit-transform:rotate(25deg);-moz-transform:rotate(25deg);-o-transform:rotate(25deg);-ms-transform:rotate(25deg);transform:rotate(25deg)}
+.skeleton .eye.right:after{left:0}
+.skeleton .nose{z-index:1;display:block ;position:absolute;top:85px;left:50%}
+.skeleton .nostril,.skeleton .nostril:after{display:block ;position:absolute;top:0;width:10px ;height:16px ;background-color:#63627b;-webkit-border-radius:100%;border-radius:100%;overflow:hidden }
+.skeleton .nostril:after{content:'';top:-1px;width:100% ;height:90% ;border:0;-webkit-border-radius:0 0 100% 100%;border-radius:0 0 100% 100%;background-color:#000}
+.skeleton .nostril.left{right:-3px;-webkit-transform:rotate(25deg);-moz-transform:rotate(25deg);-o-transform:rotate(25deg);-ms-transform:rotate(25deg);transform:rotate(25deg)}
+.skeleton .nostril.left:after{right:-1px}
+.skeleton .nostril.right{left:-3px;-webkit-transform:rotate(-25deg);-moz-transform:rotate(-25deg);-o-transform:rotate(-25deg);-ms-transform:rotate(-25deg);transform:rotate(-25deg)}
+.skeleton .nostril.right:after{left:-1px}
+.skeleton .mouth{display:block ;position:absolute;left:50%;bottom:-17px;margin-left:-30px;width:60px ;height:25px ;background-color:#9c9bae;border:3px solid #000;border-left-width:2px;border-right-width:2px;border-top:0;-webkit-border-radius:0 0 100% 100%;border-radius:0 0 100% 100%;overflow:hidden }
+.skeleton .mouth:before{z-index:0;content:'';position:absolute;top:2px;left:15%;width:100% ;height:100% ;background-color:#b9b8cf}
+.skeleton .teeth,.skeleton .teeth:before,.skeleton .teeth:after{position:absolute;bottom:-2px;left:50%;margin-left:-1px;display:block ;width:2px ;height:15px ;background-color:#000;-webkit-border-radius:100%;border-radius:100%}
+.skeleton .teeth:before,.skeleton .teeth:after{content:'';bottom:2px}
+.skeleton .teeth:before{left:-17px}
+.skeleton .teeth:after{left:17px}
+@media (max-width: 680px){header,.index header{display:block ;position:relative;width:200px;margin:0 auto;padding:6% 0}
+#content,.index #content{margin:0;padding:0}
+.content-box{position:relative !important;top:0;left:0 !important;margin:0 auto !important}
+#meta{position:relative;padding:4% 2%}
+}
