@@ -1,11 +1,12 @@
 # Heliom ⁂ Labs
 
 ## Cool things we use that you should definitely give a try*
-- [Velcro](https://github.com/rafbm/velcro-poc)
+- [Velcro](https://github.com/rafbm/velcro-poc)**
 - [Stylus utils](https://github.com/heliom/stylus-utils)
 - [Heliom head script](https://github.com/heliom/head-script)
 
-\* Utterly biased.
+\* Utterly biased.<br>
+\** Standalone version coming soon.
 
 ## One step complete installation
 ```
