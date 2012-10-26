@@ -1,7 +1,6 @@
 require File.expand_path('../config/application',  __FILE__)
 
 use Rack::Deflater
-use Rack::Cache
 
 # Sprockets
 map '/assets' do
