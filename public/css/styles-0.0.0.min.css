@@ -18,33 +18,43 @@ img{max-width:100%}
 .newline:after{content:'\A';white-space:pre}
 .image-replacement{font:0/0 a;color:transparent}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-html{font-size:62.5% ;height:100%}
-body{position:relative;height:100%;font-size:18px ;font-size:1.8rem ;background-color:#1c1c1c}
-body,legend,input,textarea,button{font-family:Helvetica,Arial,sans-serif;line-height:1.4;color:#fff}
+html{font-size:62.5% ;height:100%;}
+html.velcro-loading *{cursor:wait}
+body{position:relative;height:100%;font-size:22px ;font-size:2.2rem ;background-color:#2b2c2f;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #434549), color-stop(0.1, #2b2c2f));background-image:-webkit-linear-gradient(top, #434549 0em, #2b2c2f 10em);background-image:-moz-linear-gradient(top, #434549 0em, #2b2c2f 10em);background-image:-o-linear-gradient(top, #434549 0em, #2b2c2f 10em);background-image:-ms-linear-gradient(top, #434549 0em, #2b2c2f 10em);background-image:linear-gradient(top, #434549 0em, #2b2c2f 10em);background-attachment:fixed;-webkit-transition:padding .4s ease-in-out;-moz-transition:padding .4s ease-in-out;-o-transition:padding .4s ease-in-out;-ms-transition:padding .4s ease-in-out;transition:padding .4s ease-in-out}
+body,legend,input,textarea,button{font-family:'proxima-nova-condensed',Helvetica,Arial,sans-serif;line-height:1.4;color:#fff}
 a{color:#fff}
 a:focus,a:hover{color:#fff}
 h1{margin:0}
-header{position:absolute;top:0;left:0;display:inline-block ;*display:inline ;*zoom:1 ;width:100px;margin:0 4%;padding:2% 0;-webkit-transition:width .4s;-moz-transition:width .4s;-o-transition:width .4s;-ms-transition:width .4s;transition:width .4s;}
-header a,header img{display:block }
-header img{width:100%}
-#content{padding:0 0 0 100px;margin:0 0 0 8%;-webkit-transition:padding .4s;-moz-transition:padding .4s;-o-transition:padding .4s;-ms-transition:padding .4s;transition:padding .4s}
-nav{-webkit-box-shadow:-2px 0 5px rgba(0,0,0,0.40);box-shadow:-2px 0 5px rgba(0,0,0,0.40);background-color:#1b1b1b;}
+header{position:relative;width:92%;min-width:160px;height:105px;margin:0 auto 2%;-webkit-transition-property:width,height;-moz-transition-property:width,height;-o-transition-property:width,height;-ms-transition-property:width,height;transition-property:width,height;-webkit-transition-duration:.4s;-moz-transition-duration:.4s;-o-transition-duration:.4s;-ms-transition-duration:.4s;transition-duration:.4s;-webkit-transition-timing-function:ease-in-out;-moz-transition-timing-function:ease-in-out;-o-transition-timing-function:ease-in-out;-ms-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out;}
+header h1{position:absolute;bottom:0;left:0;margin:0;font-size:36px ;font-size:3.6rem ;}
+header h1 a{display:block ;white-space:nowrap}
+header h1 i{color:#999;font-weight:normal;font-style:normal}
+header #logo{position:absolute;bottom:13px;right:0;display:block ;width:80px;-webkit-transition-property:width,bottom;-moz-transition-property:width,bottom;-o-transition-property:width,bottom;-ms-transition-property:width,bottom;transition-property:width,bottom;-webkit-transition-duration:.4s;-moz-transition-duration:.4s;-o-transition-duration:.4s;-ms-transition-duration:.4s;transition-duration:.4s;-webkit-transition-timing-function:ease-in-out;-moz-transition-timing-function:ease-in-out;-o-transition-timing-function:ease-in-out;-ms-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out;}
+header #logo img{display:block ;width:100%}
+#content{margin:0 auto}
+.index{padding:3% 0 0;}
+.index header{height:185px;width:11%;}
+.index header #logo{width:160px;bottom:60px}
+.index #content{width:100%;max-width:480px;padding-bottom:3%}
+nav{-webkit-box-shadow:0 0 5px 2px rgba(0,0,0,0.05);box-shadow:0 0 5px 2px rgba(0,0,0,0.05);}
 nav ul{margin:0;list-style-type:none}
-nav li{display:block ;border-bottom:1px solid rgba(0,0,0,0.20)}
-nav a{display:block ;padding:.8em 1em;border-top:1px solid rgba(255,255,255,0.03);border-left:2px solid transparent;background-color:rgba(255,255,255,0.02);-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;-o-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.15s;-moz-transition-duration:.15s;-o-transition-duration:.15s;-ms-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+nav li{display:block ;background-color:#222326;border-bottom:1px solid rgba(0,0,0,0.20);}
+nav li:first-child{-webkit-border-radius:9px 9px 0 0;border-radius:9px 9px 0 0}
+nav li:first-child a{-webkit-border-radius:8px 8px 0 0;border-radius:8px 8px 0 0}
+nav li:last-child{-webkit-border-radius:0 0 9px 9px;border-radius:0 0 9px 9px}
+nav li:last-child a{-webkit-border-radius:0 0 8px 8px;border-radius:0 0 8px 8px}
+nav a{display:block ;padding:.75em 3.8%;border-top:1px solid rgba(255,255,255,0.03);border-left:3px solid transparent;background-color:rgba(255,255,255,0.02);-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;-o-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.15s;-moz-transition-duration:.15s;-o-transition-duration:.15s;-ms-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
 nav a:hover{border-left-color:#5d53fc !important;background-color:rgba(255,255,255,0.05)}
-nav li:nth-child(1) a{border-left-color:#0f0}
-nav li:nth-child(2) a{border-left-color:#ff0}
+nav li:nth-child(1n) a{border-left-color:#3f4145}
+nav li:nth-child(2n) a{border-left-color:#53555b}
 nav span{display:inline-block ;*display:inline ;*zoom:1 ;vertical-align:middle}
 nav span.label{margin:0 .1em 0 0;}
 nav span.label:after{content:' —';color:#4d4d4d}
-nav span.tags{position:relative;top:1px;font-size:14px ;font-size:1.4rem ;color:#4d4d4d;font-weight:300}
-.index header{width:300px}
-.index #content{padding:0 0 0 300px}
-#meta{position:absolute;bottom:0;left:0;font-size:11px ;font-size:1.1rem ;color:#888;padding:1% 2%;}
+nav span.tags{position:relative;top:1px;font-size:18px ;font-size:1.8rem ;color:#66696c;font-weight:300}
+#meta{position:absolute;bottom:0;left:0;font-size:14px ;font-size:1.4rem ;color:#888;padding:3% 4%;}
 #meta a:hover{color:#5d53fc}
 .content-box{-webkit-border-radius:9px;border-radius:9px;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.50);box-shadow:0 0 5px rgba(0,0,0,0.50)}
-.ios-folders #iphone{position:absolute;top:50%;left:50%;margin:-240px 0 0 -160px;display:block ;width:320px ;height:480px ;padding:33px 0 0 0;overflow:hidden ;font-size:0 ;}
+.ios-folders #iphone{position:relative;display:block ;width:320px ;height:480px ;margin:auto;padding:33px 0 0 0;overflow:hidden ;font-family:Lucida Grande;font-size:0 ;}
 .ios-folders #iphone .status{position:absolute;z-index:1;top:0;left:0;width:100%;height:20px;line-height:21px;color:#fff;font-size:12px ;font-size:1.2rem ;text-align:center;background-color:rgba(0,0,0,0.60)}
 .ios-folders #iphone a{position:relative;z-index:1;display:inline-block ;*display:inline ;*zoom:1 ;width:57px;height:57px;margin:0 0 0 19px;}
 .ios-folders #iphone a > .label{display:block ;width:100%;position:absolute;bottom:-1.45em;left:0;font-size:11px ;font-size:1.1rem ;text-align:center}
@@ -89,7 +99,8 @@ nav span.tags{position:relative;top:1px;font-size:14px ;font-size:1.4rem ;color:
 .ios-folders #iphone #row1-2:target ~ .background.part3,.ios-folders #iphone #row2-1:target ~ .background.part3{top:315px}
 .ios-folders #iphone #row1-2:target ~ .background.part4,.ios-folders #iphone #row2-1:target ~ .background.part4,.ios-folders #iphone #row3-1:target ~ .background.part4{top:404px}
 .ios-folders #iphone #row1-2:target ~ .dock,.ios-folders #iphone #row2-1:target ~ .dock,.ios-folders #iphone #row3-1:target ~ .dock{bottom:-120px}
-@-moz-keyframes slide-in{0%{top:18px}
+@media (max-width: 600px){.ios-folders #meta{position:relative;margin:2% 0;padding:4% 4%}
+}@-moz-keyframes slide-in{0%{top:18px}
 100%{top:4px}
 }@-webkit-keyframes slide-in{0%{top:18px}
 100%{top:4px}
@@ -99,7 +110,7 @@ nav span.tags{position:relative;top:1px;font-size:14px ;font-size:1.4rem ;color:
 100%{top:4px}
 }@keyframes slide-in{0%{top:18px}
 100%{top:4px}
-}.skeleton .content-box{position:absolute;top:50%;left:50%;width:200px ;height:200px ;margin:-100px 0 0 -100px;background-color:#f4f4f4;border:3px solid #5d53fc;}
+}.skeleton .content-box{position:relative;width:200px ;height:200px ;margin:auto;background-color:#f4f4f4;border:3px solid #5d53fc;}
 .chrome .skeleton .content-box:after{position:absolute;font-size:12px ;font-size:1.2rem ;top:105%;content:'Note: Chrome does not support overflow hidden with border-radius. See on Safari or Firefox.'}
 .skeleton #skeleton{position:absolute;width:120px ;height:105px ;top:50%;left:50%;margin:-60px 0 0 -60px}
 .skeleton .head{position:relative;width:100% ;height:100% ;background-color:#9c9bae;-webkit-border-radius:100%;border-radius:100%;border:3px solid #000;border-bottom-width:2px;overflow:hidden }
@@ -123,8 +134,5 @@ nav span.tags{position:relative;top:1px;font-size:14px ;font-size:1.4rem ;color:
 .skeleton .teeth:before,.skeleton .teeth:after{content:'';bottom:2px}
 .skeleton .teeth:before{left:-17px}
 .skeleton .teeth:after{left:17px}
-@media (max-width: 680px){header,.index header{display:block ;position:relative;width:200px;margin:0 auto;padding:6% 0}
-#content,.index #content{margin:0;padding:0}
-.content-box{position:relative !important;top:0;left:0 !important;margin:0 auto !important}
-#meta{position:relative;padding:4% 2%}
+@media (max-width: 430px) and (max-height: 375px){.skeleton #meta{position:relative;margin:2% 0;padding:4% 4%}
 }
