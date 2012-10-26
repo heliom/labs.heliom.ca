@@ -18,6 +18,14 @@ module Heliom::Labs
       { :title => 'Skeleton', :view => 'skeleton', :tags => %w(css) },
     ]
 
+    LAST_MODIFIED = Time.now
+
+    # Before filter
+    before do
+      cache_control :public, :max_age => 86400
+      last_modified LAST_MODIFIED
+    end
+
     # Routes
     get '/' do
       @view_class = 'index'
