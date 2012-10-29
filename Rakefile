@@ -49,7 +49,7 @@ task :bump do
     exit
   end
 
-  content = "module Heliom::Labs\n\s\sVERSION = '#{@new_version}'\nend"
+  content = "module Heliom\n\s\smodule Labs\n\s\s\s\sVERSION = '#{@new_version}'\n\s\send\nend"
   `echo "#{content}" > lib/heliom/labs/version.rb`
   puts "=> Successfully bumped version to #{@new_version}"
 end
