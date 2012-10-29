@@ -132,8 +132,9 @@ namespace :assets do
     puts "Removing #{Heliom::Labs::VERSION} assets"
 
     js_remove_path = "public/js/scripts-#{Heliom::Labs::VERSION}.min.js"
+    js_heliom_remove_path = "public/js/heliom-#{Heliom::Labs::VERSION}.min.js"
     css_remove_path = "public/css/styles-#{Heliom::Labs::VERSION}.min.css"
-    `git rm #{js_remove_path} #{css_remove_path}`
+    `git rm #{js_remove_path} #{js_heliom_remove_path} #{css_remove_path}`
 
     puts "Commiting compiled assets"
     `git add public/css public/js`
