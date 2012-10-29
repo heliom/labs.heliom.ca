@@ -54,6 +54,7 @@ nav span.tags{position:relative;top:1px;font-size:18px ;font-size:1.8rem ;color:
 #meta{position:absolute;bottom:0;left:0;font-size:14px ;font-size:1.4rem ;color:#888;padding:3% 4%;}
 #meta a:hover{color:#5d53fc}
 .content-box{-webkit-border-radius:9px;border-radius:9px;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.50);box-shadow:0 0 5px rgba(0,0,0,0.50)}
+p.note{text-align:center;font-size:18px ;font-size:1.8rem }
 .ios-folders #iphone{position:relative;display:block ;width:320px ;height:480px ;margin:auto;padding:33px 0 0 0;overflow:hidden ;font-family:Lucida Grande;font-size:0 ;}
 .ios-folders #iphone .status{position:absolute;z-index:1;top:0;left:0;width:100%;height:20px;line-height:21px;color:#fff;font-size:12px ;font-size:1.2rem ;text-align:center;background-color:rgba(0,0,0,0.60)}
 .ios-folders #iphone a{position:relative;z-index:1;display:inline-block ;*display:inline ;*zoom:1 ;width:57px;height:57px;margin:0 0 0 19px;}
