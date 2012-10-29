@@ -60,7 +60,7 @@ desc 'create a new version tag'
 task :tag do
   version = @new_version || Heliom::Labs::VERSION
   `git add lib/heliom/labs/version.rb && git commit -m "Bump version to #{version}"`
-  `git tag v#{version} && git push --tags`
+  `git tag v#{version} && git push && git push --tags`
 end
 
 namespace :assets do
