@@ -1,5 +1,3 @@
-module Heliom
-  module Labs
-    VERSION = '0.0.0'
-  end
+module Heliom::Labs
+  VERSION = '0.0.1'
 end
