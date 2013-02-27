@@ -7,15 +7,24 @@
     <%= stylesheet_include_tag 'styles' %>
     <%= javascript_include_tag 'heliom' %>
 
-    <script type="text/javascript" src="//use.typekit.net/prd0gql.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="//use.typekit.net/lct5udq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body class="<%= @view_class %>">
     <meta name="velcro:bodyClass" content="<%= @view_class %>">
 
-    <header>
-      <a id="logo" href="/" data-velcro-push="#content"><img src="/images/heliom-logo.svg" alt="Heliom"></a>
-      <h1><a href="/" data-velcro-push="#content">heliom <i>labs</i></a></h1>
+    <header id="header">
+      <nav>
+        <span class="icon-list"><i></i><i></i><i></i></span>
+        <a href="/" data-velcro-push="#content">
+          <h1><span>heliom</span>labs</h1>
+        </a>
+        <ul>
+          <li><a href="http://heliom.ca"><span>heliom</span></a></li>
+          <li><a href="http://heliom.ca/blog"><span>heliom</span>blog</a></li>
+        </ul>
+      </nav>
+      <a id="logo" href="/" data-velcro-push="#content"><img src="/images/heliom-logo.png" alt="Heliom" width="100"></a>
     </header>
 
     <div id="content">

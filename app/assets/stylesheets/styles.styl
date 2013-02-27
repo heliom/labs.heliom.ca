@@ -4,10 +4,12 @@
 @import "utils/mixins"
 
 // Variables -----------------------------------------------------------------
-$bgColor = #30333a
+$bgColor = #464d54
 $heliomColor = #5d53fc
+$darkBlue = #2e2f34
+$textColor = #cad2da
 
-$transitionDuration = .4s
+$transitionDuration = .25s
 $transitionTimingFunction = ease-in-out
 
 // Base ----------------------------------------------------------------------
@@ -22,84 +24,168 @@ html
 
 body
   position: relative
+  color: #cad2da
   height: 100%
-  font-size: 22
+  font-size: 21
   background-color: $bgColor
-  background-image: linear-gradient(top, lighten($bgColor, 12%) 0em, $bgColor 10em)
-  background-attachment: fixed
   transition: padding $transitionDuration $transitionTimingFunction
 
 body, legend, input, textarea, button
-  font-family: 'proxima-nova-condensed', Helvetica, Arial, sans-serif
+  font-family: 'soleil', Helvetica, Arial, sans-serif
   line-height: 1.4
-  color: #fff
 
-a { color: #fff }
-a:focus, a:hover { color: #fff }
+a
+  color: #cad2da
+  border-bottom: 1px solid rgba(#fff,.2)
+  
+a:focus, a:hover
+  border-bottom-color: #fff
+  
+a:active
+  border-bottom-color: transparent
+  
 
-h1 { margin: 0 }
 
 // Header --------------------------------------------------------------------
 header
+  z-index: 10
+  font-size: 0
+  padding: 3.95% 7.5% 2.5%
   position: relative
-  width: 92%
-  min-width: 160px
-  height: 105px
-  margin: 0 auto 2%
-  transition-property: width, height
-  transition-duration: $transitionDuration
-  transition-timing-function: $transitionTimingFunction
+  transition: padding $transitionDuration $transitionTimingFunction
+  
+  a { border-bottom: 0 }
+
+  nav
+    position: relative
+    left: -50px
+    margin-right: -250px
+    width: 250px
+    font-size: 0
 
   h1
-    position: absolute
-    bottom: 0; left: 0
-    margin: 0
-    font-size: 36
+    font-size: 32
+    display: block
+    margin: 10px 0 4px
+    padding: .5em 0 .35em
 
-    a
-      display: block
-      white-space: nowrap
+  .icon-list
+    z-index: 2
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    margin-right: -50px
+    padding: 44px 16px 33px 22px
 
     i
-      font-weight: 300
-      font-style: normal
-
-  #logo
-    position: absolute
-    bottom: 13px; right: 0
-    display: block
-    width: 80px
-    transition-property: width, bottom
-    transition-duration: $transitionDuration
-    transition-timing-function: $transitionTimingFunction
-
-    img
       display: block
-      width: 100%
+      size: 12px 2px
+      background-color: $darkBlue
+      background-color: rgba($darkBlue, .75)
 
+    i + i { margin-top: 2px }
+
+  nav > a
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    width: 100%
+    color: $textColor
+    font-family: $soleil
+    padding: 0
+    padding-left: 50px
+    z-index: 1
+    border: 1px solid transparent
+    transition: none
+
+  h1, li
+    font-weight: 200
+    span
+      margin-right: .05em
+      color: #fff
+      font-weight: 500
+
+  #logo { text-align: right }
+  svg { fill: $darkBlue }
+
+  nav, #logo
+    display: inline-block
+    vertical-align: middle
+
+  // #logo { width: 100% }
+  // #logo img { width: 100px }
+  
+  #logo { float: right }
+
+  ul
+    display: none
+    position: absolute
+    top: 100%; left: 0
+    width: 100%
+    margin: 0
+    list-style-type: none
+    font-size: 21
+
+  li a
+    color: $textColor
+    display: block
+    position: relative
+    left: -20px
+    padding: .75em 0 .5em 50px
+    background-color: ligthen($bgColor, 5%)
+    background-color: rgba(#5b646e, .95)
+    border: 1px solid transparent
+    border-width: 0 1px 1px 1px
+    transition: background-color .15s ease-out, color .15s ease-out, margin .15s ease-out, padding .15s ease-out
+
+.non-touch #header nav:hover ul,
+#header nav.opened ul
+  display: block
+
+  li a
+    animation: leftSwipe .15s ease-out both
+    border-color: rgba($bgColor, .4)
+
+  li:nth-child(1) a { animation-delay: .03s }
+  li:nth-child(2) a { animation-delay: .06s }
+  li:nth-child(3) a { animation-delay: .09s }
+  li:nth-child(4) a { animation-delay: .12s }
+
+.non-touch #header nav:hover ul li a:hover,
+#header nav.opened ul li a:focus
+  background-color: #5b646e
+  margin: 0 -10px
+  padding-left: 60px
+
+.non-touch #header nav:hover > a,
+#header nav.opened > a
+  background-color: #5b646e
+  border-color: rgba($bgColor, .4)
+
+.non-touch #header nav:hover .icon-list i,
+#header nav.opened .icon-list i
+  background-color: $darkBlue
+
+@keyframes leftSwipe
+  0% { left: -20px; opacity: 0 }
+  100% { left: 0; opacity: 1 }
 // Layout --------------------------------------------------------------------
 #content
   margin: 0 auto
+  padding: 0 7.5% 5%
 
 // Index ---------------------------------------------------------------------
 .index
   padding: 3% 0 0
 
-  header
-    height: 185px
-    width: 11%
-
-    #logo
-      width: 160px
-      bottom: 60px
+  header { padding: 2.5% 25% }
+  #content { padding: 0 25% 2.5% }
 
   #content
-    width: 100%
-    max-width: 480px
     padding-bottom: 3%
 
 // Nav -----------------------------------------------------------------------
-nav
+#content nav
   box-shadow: 0px 0 5px 2px rgba(#000, .05)
 
   ul
@@ -108,30 +194,27 @@ nav
 
   li
     display: block
-    background-color: lighten($bgColor, 3%)
-    border-bottom: 1px solid rgba(#000, .2)
+    color: $darkBlue
 
-    &:first-child { border-radius: 9px 9px 0 0 }
-    &:first-child a { border-radius: 8px 8px 0 0 }
-    &:last-child { border-radius: 0  0 9px 9px }
-    &:last-child a { border-radius: 0 0 8px 8px }
+    &:first-child { border-radius: 6px 6px 0 0 }
+    &:first-child a { border-radius: 5px 5px 0 0 }
+    &:last-child { border-radius: 0  0 6px 6px }
+    &:last-child a { border-radius: 0 0 5px 5px }
 
   a
     display: block
-    padding: .75em 3.8%
+    padding: 5% 7.5% 4%
     border-top: 1px solid rgba(#fff, .03)
-    border-left: 3px solid transparent
-    background-color: rgba(#fff, .02)
+    background-image: linear-gradient(top, #fff, rgba(#fff, .9))
+    border-bottom: 1px solid rgba(#000, .2)
+    color: $darkBlue
+    text-decoration: none
     transition-property: background-color, border
     transition-duration: .15s
     transition-timing-function: ease-out
 
     &:hover
-      border-left-color: $heliomColor !important
-      background-color: rgba(#fff, .05)
-
-  li:nth-child(1n) a { border-left-color: lighten($bgColor, 10%) }
-  li:nth-child(2n) a { border-left-color: lighten($bgColor, 20%) }
+      background-color: #fff
 
   span
     display: inline-block
@@ -139,11 +222,9 @@ nav
 
   span.label
     margin: 0 .1em 0 0
-    &:after { content: ' —'; color: darken(#fff, 70%) }
 
   span.tags
-    position: relative
-    top: 1px
+    float: right
     font-size: 18
     color: #66696c
     font-weight: 300
@@ -153,10 +234,7 @@ nav
   position: absolute
   bottom: 0; left: 0
   font-size: 14
-  color: #888
   padding: 3% 4%
-
-  a:hover { color: $heliomColor }
 
 .content-box
   border-radius: 9px
@@ -164,7 +242,27 @@ nav
 
 p.note
   text-align: center
-  font-size: 18
+  font-size: 16
+
+// ---------------------------------------------------------------------- 480px
+@media (max-width: 1024px)
+  .index
+    header { padding: 2.5% 7.5% }
+    #content { padding: 0 7.5% 2.5% }
+
+// ---------------------------------------------------------------------- 480px
+@media (max-width: 480px)
+  #header
+    nav { left: -22px }
+    .icon-list { padding: 32px 15px 25px 22px }
+    h1 { margin-top: .25em; font-size: 24 }
+    #logo img { width: 68px }
+    ul { top: 98% }
+  
+  #content
+    span { font-size: 18 }
+    span.tags { font-size: 14 }
+
 
 @import "labs/ios_folders"
 @import "labs/skeleton"
