@@ -5,7 +5,8 @@
   margin: auto
   padding: 33px 0 0 0
   overflow: hidden
-  font-family: Lucida Grande
+  font-family: Helvetica Neue, Helvetica, sans-serif
+  -webkit-font-smoothing: antialiased
   font-size: 0
 
   .status
@@ -16,6 +17,7 @@
     line-height: 21px
     color: #fff
     font-size: 12
+    font-weight: bold
     text-align: center
     background-color: rgba(#000, .6)
 
@@ -32,6 +34,7 @@
       position: absolute
       bottom: -1.45em; left: 0
       font-size: 11
+      font-weight: bold
       text-align: center
 
     & > .app
@@ -55,7 +58,7 @@
     & > span > span
       position: relative
       size: 18px
-      top: 4px; left: 50%
+      top: 5px; left: 50%
       margin: 0 0 0 -9px
       transform: rotate(45deg)
       overflow: hidden
@@ -90,7 +93,7 @@
   a.first { margin: 0 0 0 17px }
 
   a > .label, .folder > .label
-    text-shadow: 0 1px 0 #000, 0 2px 2px #000
+    text-shadow: 0 1px 0 #000, 0 2px 2px rgba(#000, .5)
 
   .background
     z-index: 0
