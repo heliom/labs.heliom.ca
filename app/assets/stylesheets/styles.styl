@@ -37,8 +37,10 @@ body, legend, input, textarea, button
 a
   color: #cad2da
   border-bottom: 1px solid rgba(#fff,.2)
+  transition: border-color $transitionDuration $transitionTimingFunction, color $transitionDuration $transitionTimingFunction
   
 a:focus, a:hover
+  color: #fff
   border-bottom-color: #fff
   
 a:active
@@ -161,6 +163,7 @@ header
 #header nav.opened > a
   background-color: #5b646e
   border-color: rgba($bgColor, .4)
+  transition: color .2s
 
 .non-touch #header nav:hover .icon-list i,
 #header nav.opened .icon-list i
@@ -208,7 +211,9 @@ header
     background-image: linear-gradient(top, #fff, rgba(#fff, .9))
     border-bottom: 1px solid rgba(#000, .2)
     color: $darkBlue
+    font-size: 26
     text-decoration: none
+    text-shadow: 0 1px 0 #fff
     transition-property: background-color, border
     transition-duration: .15s
     transition-timing-function: ease-out
@@ -233,12 +238,26 @@ header
 #meta
   position: absolute
   bottom: 0; left: 0
-  font-size: 14
-  padding: 3% 4%
+  font-size: 13
+  padding: 5% 7.5%
+  line-height: 1.75
+  font: italic 13px/1.75 Baskerville, Times, Georgia, serif
+  
+  h2, a
+    font: normal 400 13px brandon-grotesque, Helvetica, sans-serif
+    text-transform: uppercase
+    letter-spacing: 1px
+  
+  h2
+    margin: 0
+    color: #fff
+    font-size: 16px
 
 .content-box
   border-radius: 9px
   box-shadow: 0 0 5px rgba(#000, .5)
+
+  a { color: #fff }
 
 p.note
   text-align: center
