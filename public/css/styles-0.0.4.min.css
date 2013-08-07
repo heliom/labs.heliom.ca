@@ -56,17 +56,21 @@ header li a{color:#cad2da;display:block ;position:relative;left:-20px;padding:.7
 .index #content{padding:0 25% 2.5%}
 .index #content{padding-bottom:3%}
 #content nav{-webkit-box-shadow:0 0 5px 2px rgba(0,0,0,0.05);box-shadow:0 0 5px 2px rgba(0,0,0,0.05);}
-#content nav ul{margin:0;list-style-type:none}
+#content nav ul{margin:0;list-style-type:none;}
+#content nav ul + ul{margin-top:1em}
 #content nav li{display:block ;color:#2e2f34;}
 #content nav li:first-child{-webkit-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0}
 #content nav li:first-child a{-webkit-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}
 #content nav li:last-child{-webkit-border-radius:0 0 6px 6px;border-radius:0 0 6px 6px}
 #content nav li:last-child a{-webkit-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px}
-#content nav a{display:block ;padding:5% 7.5% 4%;border-top:1px solid rgba(255,255,255,0.03);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, rgba(255,255,255,0.90)));background-image:-webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-moz-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-o-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-ms-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);border-bottom:1px solid rgba(0,0,0,0.20);color:#2e2f34;font-size:26px ;font-size:2.6rem ;text-decoration:none;text-shadow:0 1px 0 #fff;-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;-o-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.15s;-moz-transition-duration:.15s;-o-transition-duration:.15s;-ms-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+#content nav a{display:block ;padding:5% 5.5% 4%;border-top:1px solid rgba(255,255,255,0.03);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, rgba(255,255,255,0.90)));background-image:-webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-moz-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-o-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:-ms-linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);background-image:linear-gradient(top, #fff 0%, rgba(255,255,255,0.90) 100%);border-bottom:1px solid rgba(0,0,0,0.20);color:#2e2f34;font-size:0 ;text-decoration:none;text-shadow:0 1px 0 #fff;-webkit-transition-property:background-color,border;-moz-transition-property:background-color,border;-o-transition-property:background-color,border;-ms-transition-property:background-color,border;transition-property:background-color,border;-webkit-transition-duration:.15s;-moz-transition-duration:.15s;-o-transition-duration:.15s;-ms-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
 #content nav a:hover{background-color:#fff}
 #content nav span{display:inline-block ;*display:inline ;*zoom:1 ;vertical-align:middle}
-#content nav span.label{margin:0 .1em 0 0}
-#content nav span.tags{float:right;font-size:18px ;font-size:1.8rem ;color:#66696c;font-weight:300}
+#content nav span.label{width:80%;font-size:26px ;font-size:2.6rem ;line-height:1.2}
+#content nav span.author,#content nav span.subtitle{color:#74787b}
+#content nav span.subtitle{font-size:18px ;font-size:1.8rem ;font-weight:300}
+#content nav span.tags{width:20%;text-align:right;font-size:18px ;font-size:1.8rem ;color:#66696c;font-weight:300;}
+#content nav span.tags img{opacity:.25 ;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=25) ;filter:alpha(opacity=25) }
 #meta{position:absolute;bottom:0;left:0;font-size:13px ;font-size:1.3rem ;padding:5% 7.5%;line-height:1.75;font:italic 13px/1.75 Baskerville,Times,Georgia,serif;}
 #meta h2,#meta a{font:normal 400 13px brandon-grotesque,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:1px}
 #meta h2{margin:0 0 .25em;color:#fff;font-size:16px }
