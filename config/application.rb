@@ -34,6 +34,7 @@ module Heliom::Labs
       { :name => 'kckstrt',      :user => 'heliom', :desc => 'Sinatra app generator ' },
       { :name => 'head-script',  :user => 'heliom', :desc => 'A script that we basically include in every project’s <head>' },
       { :name => 'pushes',       :user => 'heliom', :desc => 'GitHub post-commit notifs in your OS X Notification Center' },
+      { :name => 'octofeed',     :user => 'heliom', :desc => 'Your GitHub news feed, without the mess' },
     ].sort_by { |h| h[:name] }
 
     LAST_MODIFIED = Time.now
