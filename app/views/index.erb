@@ -9,4 +9,18 @@
       </li>
     <% end %>
   </ul>
+
+  <ul>
+    <% $projects.each do |project| %>
+      <li>
+        <a href="https://github.com/<%= project[:user] %>/<%= project[:name] %>">
+          <span class="label">
+            <span class="author"><%= project[:user] %>/</span><%= project[:name] %><br>
+            <span class="subtitle"><%= project[:desc] %></span>
+          </span>
+          <span class="tags"><img src="/images/github.png" alt="GitHub" width="32"></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 </nav>

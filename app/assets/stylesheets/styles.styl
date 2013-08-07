@@ -194,6 +194,7 @@ header
   ul
     margin: 0
     list-style-type: none
+    & + ul { margin-top: 1em }
 
   li
     display: block
@@ -206,12 +207,12 @@ header
 
   a
     display: block
-    padding: 5% 7.5% 4%
+    padding: 5% 5.5% 4%
     border-top: 1px solid rgba(#fff, .03)
     background-image: linear-gradient(top, #fff, rgba(#fff, .9))
     border-bottom: 1px solid rgba(#000, .2)
     color: $darkBlue
-    font-size: 26
+    font-size: 0
     text-decoration: none
     text-shadow: 0 1px 0 #fff
     transition-property: background-color, border
@@ -226,13 +227,26 @@ header
     vertical-align: middle
 
   span.label
-    margin: 0 .1em 0 0
+    width: 80%
+    font-size: 26
+    line-height: 1.2
+
+  span.author,
+  span.subtitle
+    color: #74787b
+
+  span.subtitle
+    font-size: 18
+    font-weight: 300
 
   span.tags
-    float: right
+    width: 20%
+    text-align: right
     font-size: 18
     color: #66696c
     font-weight: 300
+
+    img { opacity: .25 }
 
 // Labs ----------------------------------------------------------------------
 #meta

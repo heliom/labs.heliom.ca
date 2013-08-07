@@ -15,8 +15,26 @@ module Heliom::Labs
 
     $labs = [
       { :title => 'iOS folders', :view => 'ios_folders', :tags => %w(css no-js) },
-      { :title => 'Skeleton', :view => 'skeleton', :tags => %w(css) },
+      { :title => 'Skeleton',    :view => 'skeleton',    :tags => %w(css) },
     ]
+
+    $projects = [
+      { :name => 'architect',           :user => 'EtienneLem', :desc => 'Your web workers’ supervisor' },
+      { :name => 'skeleton',            :user => 'EtienneLem', :desc => 'Express 3.0 framework-less app structure generator' },
+      { :name => 'rquest',              :user => 'EtienneLem', :desc => 'Rqest is to Rdio what pull requests are to GitHub' },
+      { :name => 'divide',              :user => 'EtienneLem', :desc => 'Start Procfile processes in different Terminal/iTerm tabs' },
+      { :name => 'rdio-display',        :user => 'EtienneLem', :desc => 'Screensaver ala AppleTV that displays currently playing song' },
+
+      { :name => 'deebee',           :user => 'rafBM', :desc => 'Web client for your DB' },
+      { :name => 'restoradar',       :user => 'rafBM', :desc => 'What to eat now?' },
+      { :name => 'sourceresult.com', :user => 'rafBM', :desc => 'Write the source. See the result' },
+      { :name => 'howtomakeaslider', :user => 'rafBM', :desc => 'How to make a slider' },
+
+      { :name => 'stylus-utils', :user => 'heliom', :desc => 'A tiny Stylus utils library' },
+      { :name => 'kckstrt',      :user => 'heliom', :desc => 'Sinatra app generator ' },
+      { :name => 'head-script',  :user => 'heliom', :desc => 'A script that we basically include in every project’s <head>' },
+      { :name => 'pushes',       :user => 'heliom', :desc => 'GitHub post-commit notifs in your OS X Notification Center' },
+    ].sort_by { |h| h[:name] }
 
     LAST_MODIFIED = Time.now
 
