@@ -20,9 +20,3 @@ end
 
 recursive_require('../../app/helpers')
 recursive_require('../../lib')
-
-# New Relic
-if ENV['RACK_ENV'] == 'production'
-  # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data
-  ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
-end

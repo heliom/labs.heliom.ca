@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.5.1'
 
 # Server
 gem 'unicorn'
@@ -18,9 +19,4 @@ gem "yui-compressor", :require => "yui/compressor"
 # Development dependencies
 group :development do
   gem 'awesome_print'
-end
-
-# Production dependencies
-group :production do
-  gem 'newrelic_rpm'
 end
